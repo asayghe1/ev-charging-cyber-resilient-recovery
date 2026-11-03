@@ -1,0 +1,55 @@
+{
+  "repository": "https://github.com/dss-extensions/electricdss-tst",
+  "commit": "3b208397160213cae4a9e2d0a7d1aa3528ce26e1",
+  "retrieved_utc": "2026-11-03",
+  "files": [
+    {
+      "path": "13Bus/IEEE13Nodeckt.dss",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/13Bus/IEEE13Nodeckt.dss",
+      "sha256": "033ccd4005c6538e9de5b2218e83001802ce14fbc5b6c312896ae8cbc5d4a504"
+    },
+    {
+      "path": "13Bus/IEEE13Node_BusXY.csv",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/13Bus/IEEE13Node_BusXY.csv",
+      "sha256": "f8dd1528c72f339ebf41bf1355ed64ef12fbe30864fcc839ed5e5e9dc527846e"
+    },
+    {
+      "path": "13Bus/IEEELineCodes.DSS",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/13Bus/IEEELineCodes.DSS",
+      "sha256": "40ef533dfcb22738edb1125b1e15e4a1a5d41b2cca4a2f969f5d955c9784daeb"
+    },
+    {
+      "path": "123Bus/IEEE123Master.dss",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/123Bus/IEEE123Master.dss",
+      "sha256": "c92a69d9b218b1b2646ec7911783826229309038e72f16b848304c0457c0a54d"
+    },
+    {
+      "path": "123Bus/IEEE123Loads.DSS",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/123Bus/IEEE123Loads.DSS",
+      "sha256": "fd28f52836205506a1980b52c5a7e12ca585aa626c52a6249502c1c3b2fc2255"
+    },
+    {
+      "path": "123Bus/IEEE123Regulators.DSS",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/123Bus/IEEE123Regulators.DSS",
+      "sha256": "cd6ad77980dc018631ce39faab528afce40b0b9a50a6bc1c9ac8049ffb8207d7"
+    },
+    {
+      "path": "123Bus/BusCoords.dat",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/123Bus/BusCoords.dat",
+      "sha256": "0b409c0e5d99f365c0140bf38280c1d64932032f1ecb8ef83ae54d4ed0d2716f"
+    },
+    {
+      "path": "123Bus/IEEELineCodes.DSS",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/123Bus/IEEELineCodes.DSS",
+      "sha256": "40ef533dfcb22738edb1125b1e15e4a1a5d41b2cca4a2f969f5d955c9784daeb"
+    },
+    {
+      "path": "IEEELineCodes.DSS",
+      "url": "https://raw.githubusercontent.com/dss-extensions/electricdss-tst/3b208397160213cae4a9e2d0a7d1aa3528ce26e1/Version8/Distrib/IEEETestCases/IEEELineCodes.DSS",
+      "sha256": "71bc16ef9c6084b9e3bab74fbdf967080b79624683465e1483b787ff160f58b3"
+    }
+  ],
+  "upstream_description": "Maintained DSS-Extensions copy of EPRI/OpenDSS IEEE test feeders; original model text is unmodified. Local IEEELineCodes redirects preserved.",
+  "model_modifications": "Runtime only: original background kW/kvar multiplied by0.8; all regulator ForwardVreg set to120V; nominal solved taps then frozen; unity-power-factor single-phase EV groups added.",
+  "thermal_scope": "Only transformer source nameplate winding kVA/kV. No explicit line normamps in source files; no line thermal claims."
+}

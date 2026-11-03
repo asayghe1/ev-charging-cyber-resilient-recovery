@@ -1,0 +1,600 @@
+{
+  "purpose": "Development-only calibration followed by independent random validation; no global AC guarantee",
+  "cases": {
+    "ieee123": {
+      "calibration": {
+        "0.9": {
+          "seed": 17701,
+          "draws": 3000,
+          "results": {
+            "v0.002_l0.98": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.98,
+              "admitted": 2821,
+              "ac_violations": 5,
+              "max_voltage_abs_error": 0.0036257537083780322,
+              "max_loading_underprediction": 0.013889693925211444,
+              "worst_v_min": 0.9496386782857265,
+              "worst_v_max": 1.0484434369632698,
+              "worst_loading": 0.9799351112427862
+            },
+            "v0.002_l0.96": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.96,
+              "admitted": 2706,
+              "ac_violations": 5,
+              "max_voltage_abs_error": 0.0036257537083780322,
+              "max_loading_underprediction": 0.013889693925211444,
+              "worst_v_min": 0.9496386782857265,
+              "worst_v_max": 1.0484434369632698,
+              "worst_loading": 0.9617259667659459
+            },
+            "v0.005_l0.98": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.98,
+              "admitted": 2734,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0032955313302491795,
+              "max_loading_underprediction": 0.013031366878849426,
+              "worst_v_min": 0.9526771596627209,
+              "worst_v_max": 1.0453786717015436,
+              "worst_loading": 0.9799351112427862
+            },
+            "v0.005_l0.96": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.96,
+              "admitted": 2620,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0032955313302491795,
+              "max_loading_underprediction": 0.013031366878849426,
+              "worst_v_min": 0.9526771596627209,
+              "worst_v_max": 1.0453786717015436,
+              "worst_loading": 0.9617259667659459
+            },
+            "v0.008_l0.98": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.98,
+              "admitted": 2609,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0031056865334876393,
+              "max_loading_underprediction": 0.011437132033804143,
+              "worst_v_min": 0.9553032006516203,
+              "worst_v_max": 1.0424805602823257,
+              "worst_loading": 0.9799351112427862
+            },
+            "v0.008_l0.96": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.96,
+              "admitted": 2497,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0031056865334876393,
+              "max_loading_underprediction": 0.011437132033804143,
+              "worst_v_min": 0.9553032006516203,
+              "worst_v_max": 1.0424805602823257,
+              "worst_loading": 0.9617259667659459
+            }
+          }
+        },
+        "1.0": {
+          "seed": 17801,
+          "draws": 3000,
+          "results": {
+            "v0.002_l0.98": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.98,
+              "admitted": 2143,
+              "ac_violations": 3,
+              "max_voltage_abs_error": 0.003585469844982203,
+              "max_loading_underprediction": 0.012913482179487068,
+              "worst_v_min": 0.9493222711272467,
+              "worst_v_max": 1.047801511536737,
+              "worst_loading": 0.9789464118814918
+            },
+            "v0.002_l0.96": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.96,
+              "admitted": 1908,
+              "ac_violations": 2,
+              "max_voltage_abs_error": 0.0033200512853019948,
+              "max_loading_underprediction": 0.012913482179487068,
+              "worst_v_min": 0.9493222711272467,
+              "worst_v_max": 1.047801511536737,
+              "worst_loading": 0.9623496261770511
+            },
+            "v0.005_l0.98": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.98,
+              "admitted": 2063,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.00319098829996578,
+              "max_loading_underprediction": 0.0123333576551109,
+              "worst_v_min": 0.9526014164324194,
+              "worst_v_max": 1.0448755916598829,
+              "worst_loading": 0.9789464118814918
+            },
+            "v0.005_l0.96": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.96,
+              "admitted": 1838,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.003178612209316589,
+              "max_loading_underprediction": 0.0123333576551109,
+              "worst_v_min": 0.9528455615920254,
+              "worst_v_max": 1.0448755916598829,
+              "worst_loading": 0.9618880975249798
+            },
+            "v0.008_l0.98": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.98,
+              "admitted": 1954,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.00319098829996578,
+              "max_loading_underprediction": 0.01151577764491829,
+              "worst_v_min": 0.9558353351660868,
+              "worst_v_max": 1.041614004836186,
+              "worst_loading": 0.9789464118814918
+            },
+            "v0.008_l0.96": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.96,
+              "admitted": 1743,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0029443071639783103,
+              "max_loading_underprediction": 0.010551752033231998,
+              "worst_v_min": 0.9558955727419536,
+              "worst_v_max": 1.041614004836186,
+              "worst_loading": 0.9611534998756671
+            }
+          }
+        }
+      },
+      "validation": {
+        "0.9": {
+          "seed": 27701,
+          "draws": 10000,
+          "results": {
+            "v0.002_l0.98": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.98,
+              "admitted": 9344,
+              "ac_violations": 6,
+              "max_voltage_abs_error": 0.0034610053509382954,
+              "max_loading_underprediction": 0.014314954168508365,
+              "worst_v_min": 0.949647008891282,
+              "worst_v_max": 1.0484161781800714,
+              "worst_loading": 0.9839421627847261
+            },
+            "v0.002_l0.96": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.96,
+              "admitted": 8960,
+              "ac_violations": 6,
+              "max_voltage_abs_error": 0.0034610053509382954,
+              "max_loading_underprediction": 0.014314954168508365,
+              "worst_v_min": 0.949647008891282,
+              "worst_v_max": 1.0484161781800714,
+              "worst_loading": 0.9626481415523521
+            },
+            "v0.005_l0.98": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.98,
+              "admitted": 9110,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0034471075613289326,
+              "max_loading_underprediction": 0.013096216934479155,
+              "worst_v_min": 0.9524548673405036,
+              "worst_v_max": 1.0462453318551963,
+              "worst_loading": 0.9839421627847261
+            },
+            "v0.005_l0.96": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.96,
+              "admitted": 8728,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0034471075613289326,
+              "max_loading_underprediction": 0.013096216934479155,
+              "worst_v_min": 0.9524548673405036,
+              "worst_v_max": 1.0462453318551963,
+              "worst_loading": 0.9626481415523521
+            },
+            "v0.008_l0.98": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.98,
+              "admitted": 8735,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0033343550269572253,
+              "max_loading_underprediction": 0.012444391246160369,
+              "worst_v_min": 0.9552783825830501,
+              "worst_v_max": 1.042421347245742,
+              "worst_loading": 0.9839421627847261
+            },
+            "v0.008_l0.96": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.96,
+              "admitted": 8361,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0033343550269572253,
+              "max_loading_underprediction": 0.012444391246160369,
+              "worst_v_min": 0.9552783825830501,
+              "worst_v_max": 1.042421347245742,
+              "worst_loading": 0.9626481415523521
+            }
+          }
+        },
+        "1.0": {
+          "seed": 27801,
+          "draws": 10000,
+          "results": {
+            "v0.002_l0.98": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.98,
+              "admitted": 7137,
+              "ac_violations": 8,
+              "max_voltage_abs_error": 0.00374671484903899,
+              "max_loading_underprediction": 0.014318544348772111,
+              "worst_v_min": 0.9494554216574558,
+              "worst_v_max": 1.0485817123879362,
+              "worst_loading": 0.9804272437892169
+            },
+            "v0.002_l0.96": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.96,
+              "admitted": 6326,
+              "ac_violations": 5,
+              "max_voltage_abs_error": 0.0035734879564616184,
+              "max_loading_underprediction": 0.013395091268511239,
+              "worst_v_min": 0.9496196817745657,
+              "worst_v_max": 1.0479435428466117,
+              "worst_loading": 0.9699679093243067
+            },
+            "v0.005_l0.98": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.98,
+              "admitted": 6860,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0037301329860764953,
+              "max_loading_underprediction": 0.013535965343373424,
+              "worst_v_min": 0.9523953336406515,
+              "worst_v_max": 1.045370525523904,
+              "worst_loading": 0.9804272437892169
+            },
+            "v0.005_l0.96": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.96,
+              "admitted": 6072,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0031768539555788733,
+              "max_loading_underprediction": 0.012004586242095439,
+              "worst_v_min": 0.9523953336406515,
+              "worst_v_max": 1.045209910788385,
+              "worst_loading": 0.9638718861431975
+            },
+            "v0.008_l0.98": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.98,
+              "admitted": 6439,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.003459340797675625,
+              "max_loading_underprediction": 0.012046172737356642,
+              "worst_v_min": 0.9559564457262735,
+              "worst_v_max": 1.0422947519075982,
+              "worst_loading": 0.9803830106411942
+            },
+            "v0.008_l0.96": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.96,
+              "admitted": 5696,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0029120640170433587,
+              "max_loading_underprediction": 0.010535614799851323,
+              "worst_v_min": 0.9559564457262735,
+              "worst_v_max": 1.0422621909702803,
+              "worst_loading": 0.9634370241484708
+            }
+          }
+        }
+      },
+      "group_max_kw": 300.0,
+      "p0_kw": 100.0,
+      "background_uncertainty_halfwidth": 0.01
+    },
+    "ieee13": {
+      "calibration": {
+        "0.9": {
+          "seed": 17701,
+          "draws": 3000,
+          "results": {
+            "v0.002_l0.98": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.98,
+              "admitted": 2886,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.001368570698072502,
+              "max_loading_underprediction": 0.008908183854607232,
+              "worst_v_min": 0.9515466760775331,
+              "worst_v_max": 1.0483109359834935,
+              "worst_loading": 0.8762238654462069
+            },
+            "v0.002_l0.96": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.96,
+              "admitted": 2886,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.001368570698072502,
+              "max_loading_underprediction": 0.008908183854607232,
+              "worst_v_min": 0.9515466760775331,
+              "worst_v_max": 1.0483109359834935,
+              "worst_loading": 0.8762238654462069
+            },
+            "v0.005_l0.98": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.98,
+              "admitted": 2734,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.001368570698072502,
+              "max_loading_underprediction": 0.008908183854607232,
+              "worst_v_min": 0.9541832558108957,
+              "worst_v_max": 1.0450912154063725,
+              "worst_loading": 0.8762238654462069
+            },
+            "v0.005_l0.96": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.96,
+              "admitted": 2734,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.001368570698072502,
+              "max_loading_underprediction": 0.008908183854607232,
+              "worst_v_min": 0.9541832558108957,
+              "worst_v_max": 1.0450912154063725,
+              "worst_loading": 0.8762238654462069
+            },
+            "v0.008_l0.98": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.98,
+              "admitted": 2464,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0011431604458482791,
+              "max_loading_underprediction": 0.008908183854607232,
+              "worst_v_min": 0.9577074747355244,
+              "worst_v_max": 1.0422132556255836,
+              "worst_loading": 0.8762238654462069
+            },
+            "v0.008_l0.96": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.96,
+              "admitted": 2464,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0011431604458482791,
+              "max_loading_underprediction": 0.008908183854607232,
+              "worst_v_min": 0.9577074747355244,
+              "worst_v_max": 1.0422132556255836,
+              "worst_loading": 0.8762238654462069
+            }
+          }
+        },
+        "1.0": {
+          "seed": 17801,
+          "draws": 3000,
+          "results": {
+            "v0.002_l0.98": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.98,
+              "admitted": 1810,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0007475295143468674,
+              "max_loading_underprediction": 0.00870100806143026,
+              "worst_v_min": 0.9519135079127169,
+              "worst_v_max": 1.0476058582115908,
+              "worst_loading": 0.9718279509401057
+            },
+            "v0.002_l0.96": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.96,
+              "admitted": 416,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0006635370430300158,
+              "max_loading_underprediction": 0.00870100806143026,
+              "worst_v_min": 0.9519135079127169,
+              "worst_v_max": 1.03737897974347,
+              "worst_loading": 0.9592950551264531
+            },
+            "v0.005_l0.98": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.98,
+              "admitted": 1375,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0007199636275833088,
+              "max_loading_underprediction": 0.00870100806143026,
+              "worst_v_min": 0.9547571811510187,
+              "worst_v_max": 1.0448489909088774,
+              "worst_loading": 0.9712673698800856
+            },
+            "v0.005_l0.96": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.96,
+              "admitted": 244,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0005077536445368125,
+              "max_loading_underprediction": 0.00870100806143026,
+              "worst_v_min": 0.9549961336446736,
+              "worst_v_max": 1.03737897974347,
+              "worst_loading": 0.9592950551264531
+            },
+            "v0.008_l0.98": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.98,
+              "admitted": 909,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.000626367831719099,
+              "max_loading_underprediction": 0.00870100806143026,
+              "worst_v_min": 0.9579446471520302,
+              "worst_v_max": 1.0421578801719587,
+              "worst_loading": 0.9688197241314237
+            },
+            "v0.008_l0.96": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.96,
+              "admitted": 136,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0005077536445368125,
+              "max_loading_underprediction": 0.00870100806143026,
+              "worst_v_min": 0.9579724264379251,
+              "worst_v_max": 1.03737897974347,
+              "worst_loading": 0.9592950551264531
+            }
+          }
+        }
+      },
+      "validation": {
+        "0.9": {
+          "seed": 27701,
+          "draws": 10000,
+          "results": {
+            "v0.002_l0.98": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.98,
+              "admitted": 9629,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0016186207311348344,
+              "max_loading_underprediction": 0.008764967796235146,
+              "worst_v_min": 0.9506377892702909,
+              "worst_v_max": 1.0481433176546877,
+              "worst_loading": 0.8807768199176879
+            },
+            "v0.002_l0.96": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.96,
+              "admitted": 9629,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0016186207311348344,
+              "max_loading_underprediction": 0.008764967796235146,
+              "worst_v_min": 0.9506377892702909,
+              "worst_v_max": 1.0481433176546877,
+              "worst_loading": 0.8807768199176879
+            },
+            "v0.005_l0.98": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.98,
+              "admitted": 9069,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0013545455372684367,
+              "max_loading_underprediction": 0.008764967796235146,
+              "worst_v_min": 0.9540295122237311,
+              "worst_v_max": 1.0452069558793116,
+              "worst_loading": 0.8722797291532555
+            },
+            "v0.005_l0.96": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.96,
+              "admitted": 9069,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0013545455372684367,
+              "max_loading_underprediction": 0.008764967796235146,
+              "worst_v_min": 0.9540295122237311,
+              "worst_v_max": 1.0452069558793116,
+              "worst_loading": 0.8722797291532555
+            },
+            "v0.008_l0.98": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.98,
+              "admitted": 8114,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0011762517438564934,
+              "max_loading_underprediction": 0.008744146054292856,
+              "worst_v_min": 0.9574360600605905,
+              "worst_v_max": 1.0421916578779675,
+              "worst_loading": 0.8722797291532555
+            },
+            "v0.008_l0.96": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.96,
+              "admitted": 8114,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0011762517438564934,
+              "max_loading_underprediction": 0.008744146054292856,
+              "worst_v_min": 0.9574360600605905,
+              "worst_v_max": 1.0421916578779675,
+              "worst_loading": 0.8722797291532555
+            }
+          }
+        },
+        "1.0": {
+          "seed": 27801,
+          "draws": 10000,
+          "results": {
+            "v0.002_l0.98": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.98,
+              "admitted": 5999,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0007979797326067573,
+              "max_loading_underprediction": 0.009009226012539284,
+              "worst_v_min": 0.9515313888269031,
+              "worst_v_max": 1.0477836865192918,
+              "worst_loading": 0.9711862973331381
+            },
+            "v0.002_l0.96": {
+              "voltage_margin": 0.002,
+              "loading_limit": 0.96,
+              "admitted": 1440,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0007154696868945098,
+              "max_loading_underprediction": 0.009009226012539284,
+              "worst_v_min": 0.9517641874144517,
+              "worst_v_max": 1.0396173817784962,
+              "worst_loading": 0.9596292658589887
+            },
+            "v0.005_l0.98": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.98,
+              "admitted": 4551,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0007962401056145207,
+              "max_loading_underprediction": 0.009009226012539284,
+              "worst_v_min": 0.9547721442782766,
+              "worst_v_max": 1.0452701256471975,
+              "worst_loading": 0.9711862973331381
+            },
+            "v0.005_l0.96": {
+              "voltage_margin": 0.005,
+              "loading_limit": 0.96,
+              "admitted": 925,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.00046593486612311885,
+              "max_loading_underprediction": 0.009009226012539284,
+              "worst_v_min": 0.9547721442782766,
+              "worst_v_max": 1.0396173817784962,
+              "worst_loading": 0.9596292658589887
+            },
+            "v0.008_l0.98": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.98,
+              "admitted": 3075,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0005953874922984825,
+              "max_loading_underprediction": 0.009009226012539284,
+              "worst_v_min": 0.9576488808573546,
+              "worst_v_max": 1.0421283936830164,
+              "worst_loading": 0.9692776411630066
+            },
+            "v0.008_l0.96": {
+              "voltage_margin": 0.008,
+              "loading_limit": 0.96,
+              "admitted": 491,
+              "ac_violations": 0,
+              "max_voltage_abs_error": 0.0004452495117697186,
+              "max_loading_underprediction": 0.009009226012539284,
+              "worst_v_min": 0.9580970140449558,
+              "worst_v_max": 1.0373809223053405,
+              "worst_loading": 0.9592507284525179
+            }
+          }
+        }
+      },
+      "group_max_kw": 200.0,
+      "p0_kw": 50.0,
+      "background_uncertainty_halfwidth": 0.01
+    }
+  },
+  "elapsed_seconds": 14.893084868001097
+}

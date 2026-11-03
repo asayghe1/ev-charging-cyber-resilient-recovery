@@ -1,0 +1,115 @@
+\subsection{Electrical Outcomes and Service}
+All 3\,980 episodes completed with converged AC solutions.
+In the main impaired cases, P delivers
+480.1~kWh/episode, 99.84~kWh more than B2 (95\% paired interval
+$[95.94,103.87]$~kWh), a 26.3\% increase. B2, B3, B4, P, and R have no
+observed electrical violations. P's worst voltage is 0.95487~p.u. and its
+largest terminal-phase current loading is 0.98299~p.u.; no cap-containment
+failure occurs. These are observed outcomes within the modeled conditions.
+
+\begin{table}[t]
+\caption{Impaired Main Results: 240 Episodes per Policy. Energy and Shortfall
+Are Means; Loading Is the Worst Terminal-Phase Current Ratio.}
+\label{tab:main}
+\centering
+\input{tables/main_table}
+\end{table}
+
+B0's greater delivery accompanies violations in 192 episodes, a minimum
+voltage of 0.93772~p.u., and a maximum loading of 1.11963~p.u.
+Even the clean condition produces 34/60 violating B0 episodes: ordinary
+latency already makes immediate capacity release unreliable. Additional
+impairment is therefore not the sole cause of this failure. B1's 20\% margin,
+selected with zero development violations, yields 22/240 impaired and 2/60
+clean violating cases. Sixteen impaired violations occur in T4, illustrating
+that development headroom does not certify expiry-aware capacity release.
+
+\subsection{Supersession Has a Service Cost}
+P does not dominate the query-only serialized variant. Its paired mean
+P$-$B3 difference is $-2.48$~kWh (95\% interval $[-3.23,-1.69]$), or
+$-0.51\%$ relative to B3. Fig.~\ref{fig:paired} shows a negative effect
+in T1 and T2, an interval spanning zero in T3, and a small positive T4
+effect of 0.135~kWh. In the clean condition, B3, P, and R have identical
+489.74-kWh mean delivery. Thus the measured service penalty emerges when
+the policies interact with unresolved execution.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{paired_effects.pdf}
+\caption{Paired supersession-minus-serialization energy differences. The 95\%
+intervals resample 30 cohort blocks; each condition retains both loading levels.
+Negative values favor B3.}
+\label{fig:paired}
+\end{figure}
+
+P issues more commands than B3 (86.3 versus 68.1 per impaired episode) but
+fewer queries (25.6 versus 49.1). Its integrated reserved-but-unused capacity
+is smaller, 16.89 versus 22.19~kWh-equivalent, without greater delivered
+energy. Reservation slack alone is therefore not a service objective.
+Fig.~\ref{fig:trace} presents the prespecified median-effect T1 example,
+selected across all 30 higher-loading cohorts. P delivers 9.43~kWh less
+than B3 in this case.
+R improves P's mean delivery to 481.9~kWh, but remains below B3; immediate
+application evidence is not a service upper bound for a greedy scheduler.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{representative_trace.pdf}
+\caption{Median-effect T1 example (cohort 1011, loading center 1.0).
+Curves show actual delivered energy and transformer terminal-phase loading.
+The shaded interval spans the staggered link outages. All trace replays
+reproduce their saved main-case metrics.}
+\label{fig:trace}
+\end{figure}
+
+\subsection{Supplementary Retry Comparison}
+Table~\ref{tab:retry} reports the separately frozen 960-episode follow-up. All four
+implementations have zero electrical violations or cap-containment failures.
+With retries enabled for both, P$_{\mathrm r}-$B3$_{\mathrm r}$ is
+$-0.825$~kWh (95\% interval $[-1.137,-0.497]$), or $-0.17\%$.
+On these same new cohorts, the query-only difference is $-2.406$~kWh.
+Thus equal retry capability narrows the aggregate gap without establishing a
+supersession service advantage. Retry-enabled P gains 0.400~kWh relative to
+retry-enabled B3 in T1, while losing 3.370~kWh in T2.
+
+\begin{table}[t]
+\caption{Supplementary Retry Experiment: 240 Episodes per Policy.
+Subscript r Denotes 60-s Same-Generation Retries.
+Commands Include Retransmissions.}
+\label{tab:retry}
+\centering
+\input{tables/retry_table}
+\end{table}
+
+Retries are not guaranteed to improve this service metric: B3$_{\mathrm r}-$B3
+is $-1.680$~kWh, while P$_{\mathrm r}-$P is $-0.099$~kWh with an interval
+spanning zero. Retry attempts consume RPC opportunities otherwise available
+for state queries and alter subsequent greedy reallocations. The measured
+comparison supports the reservation accounting under both communication
+strategies, without recommending either as an optimal scheduling policy.
+
+\subsection{Sensitivity, Ablations, and Scope}
+P and B3 remain violation-free in all 120 sensitivity cases per policy,
+giving 420/420 when combined with their main cases. Longer evidence delay
+can change service: at a 180-s certificate-delay extension, P$-$B3 is
+$-3.15$~kWh with interval $[-5.56,-0.22]$. The 13-node checks also preserve
+electrical feasibility; they do not establish topology-independent guarantees.
+Across the 20 cases per ablation, omitting fallback accounting produces four
+violating episodes and replacing locational admission with an aggregate budget
+produces nine. Omitting pending-command accounting or crediting acceptance
+produces no AC violation in these sampled cases. These null outcomes do not
+establish that either omission is safe; they limit the empirical necessity
+claim for those mechanisms. Both safeguards remain assumptions of the formal
+result and are covered by execution-level regression tests.
+
+On the recorded shared execution host, the median of episode-level median
+filter times is 0.773~ms for P and 0.619~ms for B3; observed maxima are
+37.88 and 15.28~ms. These exclude AC replay and communication, and are not
+real-time implementation guarantees. Source, frozen scenarios, raw episode data,
+analysis scripts, and editable SVG figures are available at
+\url{https://github.com/asayghe1/ev-charging-cyber-resilient-recovery}.
+Synthetic demand, fixed acceptance limits, static feeder controls, and the
+trusted adapter restrict external validity. The implemented serialization
+variant provides greater aggregate service in the primary study; supersession
+is an option under the same reservations with condition-dependent service
+effects. This comparison does not establish an optimal production recovery policy.

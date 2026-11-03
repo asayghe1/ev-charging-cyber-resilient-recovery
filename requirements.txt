@@ -1,0 +1,8 @@
+# Exact minimal direct/scientific dependencies used with Python 3.12.14.
+numpy==2.3.5
+scipy==1.17.0
+matplotlib==3.10.8
+OpenDSSDirect.py==0.9.4
+dss-python==0.15.7
+dss-python-backend==0.14.5
+pytest==9.2.0

@@ -1,0 +1,10 @@
+{
+  "study_stage": "post_review_robustness",
+  "summary_sha256": "20538e4557658347536c0845f4c5fbd17b83c0bb5cd5a5f6e04ab6f5c823035d",
+  "retry_analysis_source_sha256": "efd758c397beb109d694eed3bb00e14672c7cab317c716aebde54b80dac1f336",
+  "shared_figure_source_sha256": "aab3c9b301765f730da9d4fd0a4f55c866c0803a469575ae425c075758c8f106",
+  "figure_files": [
+    "retry_effects.svg",
+    "retry_effects.pdf"
+  ]
+}

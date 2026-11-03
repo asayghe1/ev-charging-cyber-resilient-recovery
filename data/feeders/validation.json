@@ -1,0 +1,354 @@
+{
+  "purpose": "Development-model verification; not held-out policy outcomes",
+  "station_kw_equal_feasible": {},
+  "cases": {
+    "ieee13": {
+      "initial": {
+        "v_min": 0.9680775719270901,
+        "v_max": 1.0373851984468831,
+        "loading_max": 0.9471978440590613
+      },
+      "equal_group_capacity_kw": {
+        "0.9": 223.2917845249176,
+        "1.0": 139.0790045261383,
+        "1.1": null
+      },
+      "mean_evaluation_seconds": 0.00010749324394782889,
+      "median_solve_seconds": 2.945849973912118e-05,
+      "p95_solve_seconds": 5.678315119439495e-05,
+      "affine_development_check": {
+        "seed": 90210,
+        "samples": 1000,
+        "p_range_kw": [
+          0,
+          300
+        ],
+        "background_range": [
+          0.9,
+          1.1
+        ],
+        "linearization_p0_kw": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "voltage_margin": 0.002,
+        "admitted": 353,
+        "ac_violations": 3,
+        "max_voltage_abs_error": 0.0028816318795690243,
+        "max_loading_underprediction": 0.02664807176645334
+      },
+      "frozen_taps": {
+        "sub": [
+          1.0,
+          1.0
+        ],
+        "reg1": [
+          1.0,
+          1.0374999999999999
+        ],
+        "reg2": [
+          1.0,
+          1.0250000000000001
+        ],
+        "reg3": [
+          1.0,
+          1.0374999999999999
+        ],
+        "xfm1": [
+          1.0,
+          1.0
+        ]
+      },
+      "thermal_ratings": [
+        {
+          "asset": "transformer.sub",
+          "winding": 1,
+          "kva": 5000.0,
+          "kv": 115.0,
+          "phase_current_a": 25.102185616940254,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.sub",
+          "winding": 2,
+          "kva": 5000.0,
+          "kv": 4.16,
+          "phase_current_a": 693.9306120067617,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg1",
+          "winding": 1,
+          "kva": 1666.0,
+          "kv": 2.4,
+          "phase_current_a": 694.1666666666667,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg1",
+          "winding": 2,
+          "kva": 1666.0,
+          "kv": 2.4,
+          "phase_current_a": 694.1666666666667,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg2",
+          "winding": 1,
+          "kva": 1666.0,
+          "kv": 2.4,
+          "phase_current_a": 694.1666666666667,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg2",
+          "winding": 2,
+          "kva": 1666.0,
+          "kv": 2.4,
+          "phase_current_a": 694.1666666666667,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg3",
+          "winding": 1,
+          "kva": 1666.0,
+          "kv": 2.4,
+          "phase_current_a": 694.1666666666667,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg3",
+          "winding": 2,
+          "kva": 1666.0,
+          "kv": 2.4,
+          "phase_current_a": 694.1666666666667,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.xfm1",
+          "winding": 1,
+          "kva": 500.0,
+          "kv": 4.16,
+          "phase_current_a": 69.39306120067617,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.xfm1",
+          "winding": 2,
+          "kva": 500.0,
+          "kv": 0.48,
+          "phase_current_a": 601.4065304058603,
+          "provenance": "explicit source transformer winding kVA and kV"
+        }
+      ]
+    },
+    "ieee123": {
+      "initial": {
+        "v_min": 0.9817413231164013,
+        "v_max": 1.024994622623016,
+        "loading_max": 0.7336247644057191
+      },
+      "equal_group_capacity_kw": {
+        "0.9": 278.7873148918152,
+        "1.0": 215.92304110527039,
+        "1.1": 151.99297666549683
+      },
+      "mean_evaluation_seconds": 0.000360901167983684,
+      "median_solve_seconds": 0.00011996650027867872,
+      "p95_solve_seconds": 0.00019008815042980122,
+      "affine_development_check": {
+        "seed": 90210,
+        "samples": 1000,
+        "p_range_kw": [
+          0,
+          300
+        ],
+        "background_range": [
+          0.9,
+          1.1
+        ],
+        "linearization_p0_kw": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "voltage_margin": 0.002,
+        "admitted": 801,
+        "ac_violations": 23,
+        "max_voltage_abs_error": 0.006846931058235972,
+        "max_loading_underprediction": 0.024591369172349387
+      },
+      "frozen_taps": {
+        "reg1a": [
+          1.0,
+          1.0250000000000001
+        ],
+        "xfm1": [
+          1.0,
+          1.0
+        ],
+        "reg2a": [
+          1.0,
+          1.0062499999999999
+        ],
+        "reg3a": [
+          1.0,
+          1.0124999999999997
+        ],
+        "reg4a": [
+          1.0,
+          1.025
+        ],
+        "reg3c": [
+          1.0,
+          1.0062499999999999
+        ],
+        "reg4b": [
+          1.0,
+          0.99375
+        ],
+        "reg4c": [
+          1.0,
+          1.0062499999999999
+        ]
+      },
+      "thermal_ratings": [
+        {
+          "asset": "transformer.reg1a",
+          "winding": 1,
+          "kva": 5000.0,
+          "kv": 4.16,
+          "phase_current_a": 693.9306120067617,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg1a",
+          "winding": 2,
+          "kva": 5000.0,
+          "kv": 4.16,
+          "phase_current_a": 693.9306120067617,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.xfm1",
+          "winding": 1,
+          "kva": 150.0,
+          "kv": 4.16,
+          "phase_current_a": 20.817918360202853,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.xfm1",
+          "winding": 2,
+          "kva": 150.0,
+          "kv": 0.48,
+          "phase_current_a": 180.42195912175805,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg2a",
+          "winding": 1,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg2a",
+          "winding": 2,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg3a",
+          "winding": 1,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg3a",
+          "winding": 2,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg4a",
+          "winding": 1,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg4a",
+          "winding": 2,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg3c",
+          "winding": 1,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg3c",
+          "winding": 2,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg4b",
+          "winding": 1,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg4b",
+          "winding": 2,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg4c",
+          "winding": 1,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        },
+        {
+          "asset": "transformer.reg4c",
+          "winding": 2,
+          "kva": 2000.0,
+          "kv": 2.402,
+          "phase_current_a": 832.639467110741,
+          "provenance": "explicit source transformer winding kVA and kV"
+        }
+      ]
+    }
+  }
+}

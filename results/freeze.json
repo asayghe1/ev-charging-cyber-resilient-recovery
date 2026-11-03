@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-03",
+  "git_revision": "f0631a7cc14b5460f1cd6926300cc113a2f76d89",
+  "evaluation_episodes": 3020,
+  "feedback_margin": 0.2,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 697213,
+  "source_sha256": {
+    "docs/FROZEN_PROTOCOL.md": "321353ff65ea31547d9444d31bbeb0c4398e55e971832e0b684b7c230f95a49b",
+    "scripts/analyze_study.py": "002a70019045c3038619081aef6e2f4aeb8eb086ff3628a25db1aa329f625c60",
+    "scripts/run_study.py": "deeca3950bab2a4212199f3b6979280656727ff33276e963c0399f1e690d8311",
+    "src/evrecovery/execution.py": "47c17866e58dffc208f20bb0c036860a973fc39b027b3e40dcc1b3790d3e0e22",
+    "src/evrecovery/feeder.py": "4004d0a88f3f892a74239ffaff09981cf452f3b699909b987f5e084aa142d61e",
+    "src/evrecovery/policies.py": "568445db927d1cb85116b1320b4239356da9b02720e34a485cf9db63a1ae732f",
+    "src/evrecovery/scenarios.py": "d6810b47403b48230b8063a2c5ec0e6dcc30556b5f4c093a33bd756f195e706a",
+    "src/evrecovery/simulator.py": "8cdf889b0cf97e06b4a878a4879228e0c3aecfbd9812138fd9957bd22c438de7"
+  },
+  "development": {
+    "pilot": "pilot_repaired.jsonl",
+    "feedback_tuning": "feedback_tuning.jsonl",
+    "unsafe_by_margin": {
+      "0.05": 6,
+      "0.10": 8,
+      "0.20": 0
+    },
+    "cases_per_margin": 50
+  }
+}

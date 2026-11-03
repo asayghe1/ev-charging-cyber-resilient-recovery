@@ -1,0 +1,14 @@
+\section{Conclusion}
+Execution-consistent reservations connect uncertain charging commands to feeder
+capacity that can actually be reused. Under the stated adapter contract,
+reserve-before-send, retained unresolved generations, and explicit expiry
+fallback preserve containment and the selected affine feasibility rows.
+The AC study finds no electrical violations for either reservation variant,
+while serialization delivers slightly more energy overall than nonexpanding
+supersession, including when both methods retry unresolved commands.
+This separates the safety contribution of execution accounting
+from the scheduling choice of when to replace a pending operation.
+Deployment requires validating the adapter contract,
+clock and tracking bounds, certificate integrity, and network-model accuracy on
+physical chargers. Field charging traces and low-voltage network detail remain
+necessary to assess operational generalization.

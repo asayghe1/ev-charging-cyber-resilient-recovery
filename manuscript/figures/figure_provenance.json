@@ -1,0 +1,26 @@
+{
+  "purpose": "Presentation-only revision after primary and retry analyses",
+  "font_family": "Times New Roman",
+  "font_file_basename": "Times.TTF",
+  "font_size_pt": 8,
+  "numerical_inputs_sha256": {
+    "primary_summary": "dd561ccb3530b4b86387574148883411054fc21db15727b59d01cbf50fa0b0ba",
+    "retry_summary": "20538e4557658347536c0845f4c5fbd17b83c0bb5cd5a5f6e04ab6f5c823035d",
+    "trace": "711ff181a4ae7b0c2eff68232cbf8ffdb8295cd23a0ae06c00b9a723f4cd8d81",
+    "frozen_plot_source": "aab3c9b301765f730da9d4fd0a4f55c866c0803a469575ae425c075758c8f106",
+    "presentation_source": "d595ff5e1c0ee112877d86370ccfda21f4995314f221f43d81d70fa6434cc323"
+  },
+  "svg_text": "editable text; no embedded raster images",
+  "figure_formats": [
+    "svg",
+    "pdf"
+  ],
+  "trace_selection": {
+    "seed": 1011,
+    "pattern": "T1",
+    "loading": 1.0,
+    "rule": "Closest P minus B3 energy difference to the median among all30 T1/high-loading main cohorts; smaller seed breaks ties.",
+    "median_difference_kwh": -9.65779902944604,
+    "selected_difference_kwh": -9.434527025128546
+  }
+}

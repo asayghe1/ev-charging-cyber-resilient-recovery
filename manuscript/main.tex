@@ -1,0 +1,38 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newenvironment{proof}{\begin{IEEEproof}}{\end{IEEEproof}}
+\graphicspath{{figures/}}
+\begin{document}
+\title{Cyber-Resilient Recovery of Electric Vehicle\\Charging Under Uncertain Command Execution}
+\author{\IEEEauthorblockN{Ali Sayghe and Ahmed Sultan}
+\IEEEauthorblockA{Department of Electrical and Electronic Engineering\\
+Yanbu Industrial College, Royal Commission for Jubail and Yanbu\\
+Yanbu, Saudi Arabia\\
+sayghea@rcjy.edu.sa, Sultanba@rcjy.edu.sa}}
+\maketitle
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+\begin{IEEEkeywords}
+Capacity reservation, charging recovery, cyber-physical security,
+distribution networks, electric vehicles.
+\end{IEEEkeywords}
+\input{body}
+\input{evaluation}
+\input{conclusion}
+\section*{Acknowledgment}
+OpenAI ChatGPT~\cite{openai2026chatgpt} was used to develop the exposition,
+draft and revise the Abstract and Sections~I--VI, and generate and review
+simulation, analysis, and figure code. The numerical results were obtained by
+executing the supplied code; the figures plot those saved results.
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}
