@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := paper
+.DEFAULT_GOAL := check
 
 PYTHON ?= .venv/bin/python
 WORKERS ?= 4
@@ -12,24 +12,13 @@ export PYTHONPATH := src
 export OPENBLAS_NUM_THREADS := 1
 export OMP_NUM_THREADS := 1
 
-.PHONY: paper analysis analysis-retry trace figures check simulate simulate-main simulate-sensitivity simulate-ablations simulate-retry reproduce clean-tex
-
-# The default build consumes saved evidence; it never launches the study.
-paper: figures
-	cd manuscript && pdflatex -interaction=nonstopmode -halt-on-error main.tex
-	cd manuscript && bibtex main
-	cd manuscript && pdflatex -interaction=nonstopmode -halt-on-error main.tex
-	cd manuscript && pdflatex -interaction=nonstopmode -halt-on-error main.tex
+.PHONY: analysis analysis-retry trace figures check simulate simulate-main simulate-sensitivity simulate-ablations simulate-retry reproduce
 
 analysis:
 	$(PYTHON) scripts/analyze_study.py --results $(RESULTS_DIR) --out $(ANALYSIS_DIR)
-	mkdir -p manuscript/tables
-	cp $(ANALYSIS_DIR)/main_table.tex manuscript/tables/main_table.tex
 
 analysis-retry:
 	$(PYTHON) scripts/analyze_retry.py --input $(RESULTS_DIR)/retry.jsonl --config $(RESULTS_DIR)/retry.config.json --out $(RESULTS_DIR)/retry_analysis
-	mkdir -p manuscript/tables
-	cp $(RESULTS_DIR)/retry_analysis/retry_table.tex manuscript/tables/retry_table.tex
 
 # Explicit because these four descriptive replays are not part of a paper build.
 trace:
@@ -69,5 +58,3 @@ reproduce: simulate
 	$(PYTHON) scripts/analyze_retry.py --input $(REPRO_DIR)/retry.jsonl --config $(REPRO_DIR)/retry.config.json --out $(REPRO_DIR)/retry_analysis
 	$(PYTHON) scripts/format_figures.py --summary $(REPRO_DIR)/analysis/summary.json --retry-summary $(REPRO_DIR)/retry_analysis/summary.json --trace $(REPRO_DIR)/representative_trace.json --out $(REPRO_DIR)/figures
 
-clean-tex:
-	rm -f manuscript/main.aux manuscript/main.blg manuscript/main.log manuscript/main.out

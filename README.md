@@ -2,11 +2,13 @@
 
 **Authors:** Ali Sayghe and Ahmed Sultan. Department of Electrical and Electronic Engineering, Yanbu Industrial College, Royal Commission for Jubail and Yanbu, Yanbu, Saudi Arabia.
 
-**Paper:** [PDF](manuscript/main.pdf) · [LaTeX source](manuscript/main.tex) · [SVG figures](manuscript/figures)
+**Research resources:** [Simulation code](src/evrecovery) · [SVG figures](manuscript/figures)
+
+**The manuscript PDF and LaTeX paper sources have been removed from the current public branch at the authors' request.** Earlier Git commits may still contain copies.
 
 **Repository:** <https://github.com/asayghe1/ev-charging-cyber-resilient-recovery>
 
-This package contains the LaTeX manuscript, executed-study configuration, Python event simulator, public IEEE feeder source files, regression tests, numerical outputs, and editable SVG/vector PDF figures for the IEEE PES General Meeting 2027 paper. The study evaluates charging-capacity reservations under uncertain command execution. Its mathematical result is conditional on the stated affine network and trusted adapter contract; nonlinear AC replay supplies simulation evidence.
+This repository contains study configurations, a Python event simulator, public IEEE feeder source files, regression tests, analysis scripts, and editable SVG/vector PDF figures for the electric-vehicle charging recovery study. The study evaluates charging-capacity reservations under uncertain command execution. Its mathematical result is conditional on the stated affine network and trusted adapter contract; nonlinear AC replay supplies simulation evidence.
 
 The charging requests are **synthetic**. Six single-phase charging populations are medium-voltage equivalents attached to public IEEE 123-node and IEEE 13-node feeders. The package does not represent field measurements, charger hardware tests, production OCPP conformance, secondary charging networks, or line-ampacity validation. Thermal metrics cover source-rated transformer winding terminal-phase currents. See [docs/PARAMETERS.md](docs/PARAMETERS.md), [docs/FEEDER.md](docs/FEEDER.md), and [docs/EXECUTION_CONTRACT.md](docs/EXECUTION_CONTRACT.md) for the exact scope.
 
@@ -24,16 +26,16 @@ The primary P/B3 implementations query unresolved execution without retransmitti
 
 ## Environment and quick build
 
-The recorded execution environment uses Python **3.12.14** on Linux. Install the seven pinned scientific/test packages in a virtual environment; pip resolves their ordinary transitive dependencies. The `git` executable must be available for simulation manifest metadata; an extracted archive does not need to be a Git checkout. A system TeX installation must provide `pdflatex`, `bibtex`, and the packages loaded by `manuscript/main.tex`. The official, unmodified `IEEEtran.cls` and `IEEEtran.bst` are included. No network access or charging-data credentials are needed to replay the bundled feeder cases after dependencies are installed.
+The recorded execution environment uses Python **3.12.14** on Linux. Install the seven pinned scientific/test packages in a virtual environment; pip resolves their ordinary transitive dependencies. The `git` executable must be available for simulation manifest metadata; an extracted archive does not need to be a Git checkout. No network access or charging-data credentials are needed to replay the bundled feeder cases after dependencies are installed.
 
 ```bash
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 make check
-make paper
+make check
 ```
 
-`make paper` consumes the supplied `results/main.jsonl`, `results/sensitivity.jsonl`, `results/ablations.jsonl`, `results/retry.jsonl` with its configuration, and `results/representative_trace.json`; it validates and regenerates analysis, tables and figures, then runs pdflatex, BibTeX, and two final pdflatex passes. It produces `manuscript/main.pdf`. It does not launch the simulation study. All five figure assets have an editable-text `.svg` and a vector `.pdf` in `manuscript/figures`; two appear in the manuscript and three provide companion views. LaTeX includes the PDFs and local generated tables, so the separate LaTeX archive compiles without Python or external data paths. `make clean-tex` removes only disposable TeX logs/auxiliary files and preserves the supplied bibliography, PDF, results, and figures.
+The manuscript is not included in the current public branch. Saved-data plots can be regenerated with `make figures` when the expected raw result files are available; SVG and vector PDF figures remain in `manuscript/figures`.
 
 For the revised typography, `scripts/format_figures.py` reuses the original frozen plot functions with eight-point serif text. It selects a TrueType Times New Roman font, with a TrueType Nimbus Roman fallback. The delivered plots use genuine Times New Roman at eight points. Install a suitable TrueType family to regenerate figures; CFF/OTF fonts are rejected to prevent PDF embedding warnings, and the supplied figure PDFs already embed their fonts. Historical plotting/analysis sources and all experiment manifests retain their original hashes.
 
@@ -64,13 +66,12 @@ Run either the Make recipe or these explicit commands, since they target the sam
 
 The 3,020 evaluation episodes exclude development pilots, feedback tuning, feeder margin calibration/validation, regression tests, and four B0/B3/P/R representative-trace reruns. Main inference averages the eight impaired conditions within each of 30 independent synthetic cohort seeds before a 10,000-draw percentile block bootstrap with seed 697213. Sensitivity and ablation comparisons use ten and five seed blocks, respectively. T1 through T4 are distinct stress conditions; cross-condition differences do not isolate a causal effect of attack selectivity. See [docs/FROZEN_PROTOCOL.md](docs/FROZEN_PROTOCOL.md).
 
-The additional 960 retry episodes also exclude development and tests. They use 30 new seeds 3000–3029, four impaired conditions, two loading centers, and the original/retry variants of P and B3. Their equal-retry comparison uses the same 10,000-draw bootstrap on 30 cohort blocks. The follow-up was designed after primary analysis and frozen before these new outcomes were examined. It does not change the primary inference. The original eight frozen source hashes and original raw/configuration outputs were checked unchanged after execution. `make paper` invokes `scripts/format_figures.py` to generate all five figure views, including the retry comparison, in `manuscript/figures`.
+The additional 960 retry episodes also exclude development and tests. They use 30 new seeds 3000–3029, four impaired conditions, two loading centers, and the original/retry variants of P and B3. Their equal-retry comparison uses the same 10,000-draw bootstrap on 30 cohort blocks. The follow-up was designed after primary analysis and frozen before these new outcomes were examined. It does not change the primary inference. The original eight frozen source hashes and original raw/configuration outputs were checked unchanged after execution. `make figures` invokes `scripts/format_figures.py` to generate all five figure views, including the retry comparison, in `manuscript/figures`.
 
 ## Files and provenance
 
 | Path | Contents |
 | --- | --- |
-| `manuscript/main.tex`, `body.tex`, `references.bib` | Paper source and reviewed reference records |
 | `src/evrecovery/` | Trusted adapter/ledger model, policies, synthetic scenarios, event replay, AC feeder interface |
 | `scripts/run_study.py` | Paired episode runner and configuration-sidecar writer |
 | `scripts/analyze_study.py` | Complete-layout validation, cohort bootstrap, CSV/JSON/LaTeX summaries |
@@ -90,4 +91,4 @@ The freeze and per-run hashes identify the executed core more precisely than the
 
 To regenerate development-only feeder margins, run `PYTHONPATH=src .venv/bin/python data/feeders/validate_margins.py` in a separate copy of this package. That script writes `data/feeders/margin_validation.json`, so it must not be used to overwrite the preserved supplied evidence inadvertently. Random finite validation is not a global nonlinear AC certificate. `docs/PARAMETERS.md` gives every calibration candidate and sampling seed.
 
-The manuscript is prepared for IEEE PES General Meeting 2027. This public package does not constitute a conference submission or claim acceptance. Historical Git revisions and execution paths in frozen manifests record the original study environment and need not occur in this publication repository's history.
+The manuscript has been removed from the current public branch. This code-and-figure repository does not constitute a conference submission or claim acceptance. Historical Git revisions and execution paths in frozen manifests record the original study environment and need not occur in this publication repository's history.
